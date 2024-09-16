@@ -15,8 +15,8 @@ function addTask() {
 };
 
 //Function to delete a task for the list of tasks
-function removeTask(task) {
-  tasks.splice(task, 1);
+function removeTask(taskIndex) {
+  tasks.splice(taskIndex, 1);
       showTasks();
 }
 
