@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Basic JavaScript</title>
+</head>
+<body>
+  <section id="counter-wrapper">
+    <h1> Counter</h1>
+    <div id="inner-div">
+      <button type="button" class="counter-btn red" onclick="minus()">-</button>
+      <h2 id="count-text" class="count-div"></h2>
+      <button type="button" class="counter-btn green" onclick="add()">+</button>
+    </div>
+  </section>
+
+  <section id="tasks-wrapper">
+    <H2>Tasks</H2>
+    <input type="text" id="new-task" placeholder="Add new tasks..." />
+    <input type="button" id="add-task" value="Save" onclick="addTask()">
+    <div id="task-list"></div>
+  </section>
+  
+  <script src="index.js"></script>
+  <script src="tasks.js"></script>
+</body>
+</html>
