@@ -14,13 +14,14 @@
       <h2 id="count-text" class="count-div"></h2>
       <button type="button" class="counter-btn green" onclick="add()">+</button>
     </div>
+    <input type="button" value="Reset" onclick="resetCounter()">
   </section>
 
   <section id="tasks-wrapper">
     <H2>Tasks</H2>
     <input type="text" id="new-task" placeholder="Add new tasks..." />
     <input type="button" id="add-task" value="Save" onclick="addTask()">
-    <div id="task-list"></div>
+    <ol id="task-list"></ol>
   </section>
   
   <script src="index.js"></script>

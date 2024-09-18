@@ -16,7 +16,8 @@
     document.getElementById('count-text').textContent = total;
   }
 
-//======================================================================
-
-// To-Do-List
+function resetCounter() {
+  total = 0;
+  document.getElementById('count-text').textContent = total;
+}
 
