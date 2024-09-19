@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Basic JavaScript</title>
-</head>
-<body>
-  <section id="counter-wrapper">
-    <h1> Counter</h1>
-    <div id="inner-div">
-      <button type="button" class="counter-btn red" onclick="minus()">-</button>
-      <h2 id="count-text" class="count-div"></h2>
-      <button type="button" class="counter-btn green" onclick="add()">+</button>
-    </div>
-    <input type="button" value="Reset" onclick="resetCounter()">
-  </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="tasks.css" />
+    <title>Basic JavaScript</title>
+  </head>
 
-  <section id="tasks-wrapper">
-    <H2>Tasks</H2>
-    <input type="text" id="new-task" placeholder="Add new tasks..." />
-    <input type="button" id="add-task" value="Save" onclick="addTask()">
-    <ol id="task-list"></ol>
-  </section>
-  
-  <script src="index.js"></script>
-  <script src="tasks.js"></script>
-</body>
+  <header>
+    <h1>Basics of JavaScript</h1>
+  </header>
+  <body>
+    <section id="counter-wrapper">
+      <h2>Counter</h2>
+      <div id="inner-div">
+        <button type="button" class="counter-btn red" onclick="minus()">
+          -
+        </button>
+        <h2 id="count-text" class="count-div"></h2>
+        <button type="button" class="counter-btn green" onclick="add()">
+          +
+        </button>
+      </div>
+      <input type="button" value="Reset" onclick="resetCounter()" />
+    </section>
+
+    <section id="tasks-wrapper">
+      <h2>Tasks</h2>
+      <div class="input-div">
+        <input type="text" id="new-task" placeholder="Add new tasks..." />
+        <input type="button" id="add-task" value="Save" onclick="addTask()" />
+      </div>
+      <div id="task-list"></div>
+    </section>
+
+    <script src="index.js"></script>
+    <script src="tasks.js"></script>
+  </body>
 </html>

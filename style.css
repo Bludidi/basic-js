@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-#counter-wrapper, #tasks-wrapper {
+#counter-wrapper {
   width: 50vw;
   border: 1px solid #285379;
   background-color: #285379;
@@ -16,6 +16,12 @@
 }
 
 h1 {
+  text-align: center;
+  color: #fff;
+  background-color: black;
+}
+
+h2 {
   text-align: center;
   color: #fff;
 }
