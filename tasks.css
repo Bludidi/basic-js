@@ -21,8 +21,8 @@ h1 {
 }
 
 #task-list {
-  background-color: #ffffff28;
-  padding: 10px;
+  /* background-color: #ffffff28; */
+  /* padding: 10px; */
   width: 95%;
   margin: auto;
 }
@@ -52,6 +52,7 @@ h1 {
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(240, 248, 255, 0.322);
+  background-color: #ffffff28
 }
 
 .task-div > li {
@@ -63,8 +64,16 @@ h1 {
 
 .delete-btn {
   width: 20%;
-  height: 80%;
-  background-color: rgb(200, 54, 54);
-  border: none;
-  border-radius: 5px;
+  height: 100%;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: 1px solid rgba(240, 248, 255, 0.322);
+  background-color: #ffffff00;
+  margin-right: -14px;
+  color:#fff;
+}
+
+.delete-btn:hover {
+  color: red;
 }
