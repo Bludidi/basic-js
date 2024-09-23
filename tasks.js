@@ -24,8 +24,19 @@ function markTasks(index, text) {
   }
 }
 
-function removeTask(text) {
-  text.style.display = 'none';
+//Function to remove from localStorage
+function deleteTask(elem) {
+  const tasksList = localStorage.getItem('task');
+  const tasksArray = JSON.parse(tasksList);
+
+  for (let i = 0; i < tasksArray.length; i++) {
+    if (i == elem) {
+      tasksArray.splice(i, 1);
+    }
+    tasks = tasksArray;
+    localStorage.setItem('task', JSON.stringify(tasks));
+  }
+ showTasks();
 }
 
 //Function to display a list of tasks
@@ -49,22 +60,20 @@ function showTasks() {
       task.textContent = tasksItem[i];
       task.setAttribute('id', 'task-' + i);
 
-      const deleteTask = document.createElement('button');
-      deleteTask.textContent = 'DELETE';
-      deleteTask.setAttribute('class', 'delete-btn');
+      const deleteBtn = document.createElement('button');
+      deleteBtn.textContent = 'DELETE';
+      deleteBtn.setAttribute('class', 'delete-btn');
 
       taskDiv.appendChild(checkBox);
       taskDiv.appendChild(task);
-      taskDiv.appendChild(deleteTask);
+      taskDiv.appendChild(deleteBtn);
       listItemDiv.appendChild(taskDiv);
 
       checkBox.addEventListener('click', () => {
         markTasks(checkBox, task, i);
       });
 
-      deleteTask.addEventListener('click', () => {
-        removeTask(taskDiv, i);
-      });
+      deleteBtn.addEventListener('click', () => {deleteTask(i)});
     }
   }
 }
