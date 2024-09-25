@@ -23,7 +23,7 @@ function markTasks(checkBox, text, index) {
     let checked = taskList[index].isDone = true;
     if (checked) {
     text.style.textDecoration = 'line-through';
-    }
+    }   
    
   } else {
     text.style.textDecoration = 'none';
@@ -34,8 +34,7 @@ function markTasks(checkBox, text, index) {
 
 //Function to remove from localStorage
 function deleteTask(elem) {
-  const tasksList = localStorage.getItem('task');
-  const tasksArray = JSON.parse(tasksList);
+  const tasksArray = JSON.parse(localStorage.getItem('task'));
 
   for (let i = 0; i < tasksArray.length; i++) {
     if (i == elem) {
