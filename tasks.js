@@ -16,7 +16,7 @@ const taskItem = {"task": newTask, "isDone": false, }
   showTasks();
 }
 
-
+//Function to track and update status of checkbox 
 function markTasks(checkBox, text, index) {
   const taskList = JSON.parse(localStorage.getItem('task'));
   if (checkBox.checked) {
@@ -32,7 +32,7 @@ function markTasks(checkBox, text, index) {
   localStorage.setItem('task', JSON.stringify(taskList));
 }
 
-//Function to remove from localStorage
+//Function to remove task from localStorage
 function deleteTask(elem) {
   const tasksArray = JSON.parse(localStorage.getItem('task'));
 
@@ -46,7 +46,7 @@ function deleteTask(elem) {
  showTasks();
 }
 
-//Function to display a list of tasks
+//Function to display tasks in the UI
 function showTasks() {
   const listItemDiv = document.getElementById('task-list');
   listItemDiv.innerHTML = '';
@@ -66,7 +66,6 @@ function showTasks() {
       const task = document.createElement('li');
       task.textContent = tasksItem[i].task;
       task.setAttribute('id', 'task-' + i);
-    
 
     if(tasksItem[i].isDone == true) {
       task.style.textDecoration = 'line-through';
@@ -88,7 +87,6 @@ function showTasks() {
         markTasks(checkBox, task, i);
         
       });
-
       deleteBtn.addEventListener('click', () => {deleteTask(i)});
     }
   }
