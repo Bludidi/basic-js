@@ -40,10 +40,19 @@
     <section id="tasks-wrapper">
       <h2>Tasks</h2>
       <div class="input-div">
-        <input type="text" id="new-task" placeholder="Add new tasks..." />
+        <input type="text" id="new-task" placeholder="Add new task..." />
         <input type="button" id="add-task" value="SAVE" onclick="addTask()" />
       </div>
       <div id="task-list"></div>
+    </section>
+
+    <section id="weather-wrapper">
+      <h2>Weather</h2>
+      <div class="input-div">
+        <input type="text" id="city" placeholder="Type city name..." />
+        <input type="button" id="add-city" value="ENTER" />
+      </div>
+      <div id="weather-div"></div>
     </section>
 
     <script src="index.js"></script>

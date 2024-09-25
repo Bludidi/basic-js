@@ -4,9 +4,10 @@ let tasks = [];
 
 //Function to create a new task
 function addTask() {
-  let newTask = document.getElementById('new-task').value;
+  const  newTask = document.getElementById('new-task').value;
+const taskItem = {"task": newTask, "isDone": false, }
   if (newTask !== '') {
-    tasks.push(newTask);
+    tasks.push(taskItem);
     localStorage.setItem('task', JSON.stringify(tasks));
     document.getElementById('new-task').value = '';
   } else {
@@ -16,12 +17,19 @@ function addTask() {
 }
 
 
-function markTasks(index, text) {
-  if (index.checked) {
+function markTasks(checkBox, text, index) {
+  const taskList = JSON.parse(localStorage.getItem('task'));
+  if (checkBox.checked) {
+    let checked = taskList[index].isDone = true;
+    if (checked) {
     text.style.textDecoration = 'line-through';
+    }
+   
   } else {
     text.style.textDecoration = 'none';
+    taskList[index].isDone = false;
   }
+  localStorage.setItem('task', JSON.stringify(taskList));
 }
 
 //Function to remove from localStorage
@@ -57,8 +65,16 @@ function showTasks() {
       checkBox.setAttribute('id', 'checkbox-' + i);
 
       const task = document.createElement('li');
-      task.textContent = tasksItem[i];
+      task.textContent = tasksItem[i].task;
       task.setAttribute('id', 'task-' + i);
+    
+
+    if(tasksItem[i].isDone == true) {
+      task.style.textDecoration = 'line-through';
+      checkBox.checked = true;
+    } else {
+      task.style.textDecoration = 'none';
+    }
 
       const deleteBtn = document.createElement('button');
       deleteBtn.textContent = 'DELETE';
@@ -69,8 +85,9 @@ function showTasks() {
       taskDiv.appendChild(deleteBtn);
       listItemDiv.appendChild(taskDiv);
 
-      checkBox.addEventListener('click', () => {
+      checkBox.addEventListener('change', () => {
         markTasks(checkBox, task, i);
+        
       });
 
       deleteBtn.addEventListener('click', () => {deleteTask(i)});

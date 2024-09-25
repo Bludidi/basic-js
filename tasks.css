@@ -6,7 +6,7 @@ button, #add-task {
   cursor: pointer;
 }
 
- #tasks-wrapper {
+ #tasks-wrapper, #weather-wrapper {
   width: 50vw;
   border: 1px solid #285379;
   background-color: #285379;
@@ -27,13 +27,13 @@ h1 {
   margin: auto;
 }
 
-.input-div > #new-task {
+.input-div > #new-task, #city {
   width: 75%;
   height: 35px;
   
 }
 
-.input-div > #add-task {
+.input-div > #add-task, #add-city {
   width: 20%;
   height: 35px;
   margin-left: 5px;
