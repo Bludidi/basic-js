@@ -9,10 +9,15 @@ button, #add-task {
  #tasks-wrapper, #weather-wrapper {
   width: 50vw;
   border: 1px solid #285379;
-  background-color: #285379;
+  background: linear-gradient(270deg, #95C34C 0%, #1B9B90 50%, #2C2875 100%);
   margin: 50px auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 10px;
+}
+
+#weather-wrapper {
+  background: linear-gradient(180deg, #95C34C -101.77%, #1B9B90 -0.88%, #2C2875 100%);
+
 }
 
 h1 {
