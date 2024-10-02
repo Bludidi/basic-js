@@ -15,7 +15,7 @@
   </head>
 
   <header>
-    <h1>Basics of JavaScript</h1>
+    <h1>Basics of JavaScript --Level Up!</h1>
   </header>
   <body>
     <section id="counter-wrapper">
@@ -49,13 +49,15 @@
     <section id="weather-wrapper">
       <h2>Weather</h2>
       <div class="input-div">
-        <input type="text" id="city" placeholder="Type city name..." />
-        <input type="button" id="add-city" value="ENTER" />
+        <input type="text" id="city-name" placeholder="Type city name..." />
+        <input type="button" id="add-city" value="ENTER" onclick="getCurrentWeather()" />
       </div>
       <div id="weather-div"></div>
     </section>
 
     <script src="index.js"></script>
     <script src="tasks.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="weather.js"></script>
   </body>
 </html>

@@ -27,7 +27,7 @@ h1 {
   margin: auto;
 }
 
-.input-div > #new-task, #city {
+.input-div > #new-task, #city-name {
   width: 75%;
   height: 35px;
   

@@ -46,6 +46,7 @@ function deleteTask(elem) {
  showTasks();
 }
 
+
 //Function to display tasks in the UI
 function showTasks() {
   const listItemDiv = document.getElementById('task-list');
