@@ -26,10 +26,12 @@ function getCurrentWeather(city) {
       const region = new Intl.DisplayNames(['en'], { type: 'region' })
       const country = region.of(countryCode);
 
-      document.getElementById('weather-div').innerHTML = `
-      <h3>${cityName}, ${country}</h3>
+      const weatherDiv = document.getElementById('weather-div')
+      weatherDiv.innerHTML = `
+      <h3>${cityName.toUpperCase()}, ${country.toUpperCase()}</h3>
       <h4>${temperature}°C</h4>
       <p>${description}</p>`
+      weatherDiv.style.color = '#ffffff';
     }
     catch (error) {
       return error.message;

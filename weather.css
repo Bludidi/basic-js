@@ -1,0 +1,9 @@
+#weather-div {
+text-align: center;
+background-color: rgba(250, 235, 215, 0.208);
+padding: 10px 0;
+}
+
+#weather-div > p {
+  color: ffffff;
+}
