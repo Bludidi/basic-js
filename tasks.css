@@ -20,14 +20,26 @@ button, #add-task {
 
 }
 
+@media only screen and (max-width: 600px) {
+  #tasks-wrapper, #weather-wrapper {
+    width: 90%;
+  }
+
+  .task-div > li {
+    width: 65%;
+  }
+
+  .delete-btn {
+    width: 40%;
+  }
+}
+
 h1 {
   text-align: center;
   color: #fff;
 }
 
 #task-list {
-  /* background-color: #ffffff28; */
-  /* padding: 10px; */
   width: 95%;
   margin: auto;
 }

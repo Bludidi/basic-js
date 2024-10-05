@@ -22,20 +22,19 @@
     <section id="counter-wrapper">
       <h2>Counter</h2>
       <div id="inner-div">
-        <button type="button" class="counter-btn red" onclick="minus()">
-          -
-        </button>
         <h2 id="count-text" class="count-div"></h2>
-        <button type="button" class="counter-btn green" onclick="add()">
-          +
-        </button>
       </div>
-      <input
-        type="button"
-        id="reset-btn"
-        value="RESET"
-        onclick="resetCounter()"
-      />
+
+      <div class="btn-div">
+        <input type="button" class="counter-btn red" value="-" onclick="minus()">
+        <input
+          type="button"
+          id="reset-btn"
+          value="RESET"
+          onclick="resetCounter()"
+        />
+        <input type="button" class="counter-btn green" value="+" onclick="add()">
+      </div>
     </section>
 
     <section id="tasks-wrapper">
@@ -51,7 +50,12 @@
       <h2>Weather</h2>
       <div class="input-div">
         <input type="text" id="city-name" placeholder="Type city name..." />
-        <input type="button" id="add-city" value="ENTER" onclick="getCurrentWeather()" />
+        <input
+          type="button"
+          id="add-city"
+          value="ENTER"
+          onclick="getCurrentWeather()"
+        />
       </div>
       <div id="weather-div"></div>
     </section>
