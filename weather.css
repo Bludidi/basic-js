@@ -1,9 +1,37 @@
 #weather-div {
 text-align: center;
-background-color: rgba(250, 235, 215, 0.208);
+/* background-color: rgba(250, 235, 215, 0.208); */
 padding: 10px 0;
 }
 
 #weather-div > p {
   color: ffffff;
+}
+
+.city-name {
+ font-weight: 300;
+}
+
+.temperature {
+  font-weight: 300;
+  font-size: 0.6rem;
+}
+
+.temperature > span {
+  font-weight: 200;
+  font-size: 3rem;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.small-img {
+  width: 25px;
+  height: 25px;
+  margin: 0 5px 0 10px;
 }
