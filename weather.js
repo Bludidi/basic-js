@@ -1,6 +1,6 @@
 //const { default: axios } = require("axios");
 
-const images = {
+ const images = {
   cloudy: './weather_images/cloudy.png',
   humidity: './weather_images/humidity1.png',
   raining: './weather_images/raining.png',
@@ -8,7 +8,21 @@ const images = {
   temperature: './weather_images/temperature.png',
   wind: './weather_images/wind-turbine.png',
   windSpeed: './weather_images/speedometer.png',
+  defaultImage: './weather_images/weather.png',
 };
+
+function displayImage(status){
+  let statusImage = images.defaultImage;
+
+  if(status.includes('Clear')){
+    statusImage = images.sunny;
+  } if(status.includes('clouds') || status.includes('Clouds')){
+    statusImage = images.cloudy;
+  } if(status.includes('Rain') || status.includes('rain') || status.includes('Drizzle') || status.includes('drizzle')){
+    statusImage = images.raining;
+  }
+ return statusImage;
+}
 
 //Getting current ewather data from Weatherbit API
 function getCurrentWeather(city) {
@@ -37,10 +51,14 @@ function getCurrentWeather(city) {
       const country = region.of(countryCode);
       console.log(response);
 
+      const statusImage = displayImage(description);
+
+
       const weatherDiv = document.getElementById('weather-div');
       weatherDiv.innerHTML = `
       <h3 class="city-name">${cityName.toUpperCase()}, ${country.toUpperCase()}</h3>
       <h4 class="temperature">CURRENTLY FEELS LIKE <br> <span>${temperature}°C</span></h4>
+      <div><img src="${statusImage}" class="mid-img" /></div>
       <p class="description">${description}</p>
       <div class="grid-wrapper features">
       <div class="grid-item item1"><img class="small-img" src="${

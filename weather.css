@@ -36,6 +36,11 @@ padding: 10px 0;
   /* margin: 0 5px 0 10px; */
 }
 
+.mid-img {
+  width: 20%;
+  height: 20%;
+}
+
 .grid-wrapper {
   display: grid; 
   grid-template-areas: 'one two four five seven eight'
