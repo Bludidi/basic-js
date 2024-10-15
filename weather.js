@@ -46,6 +46,7 @@ function getCurrentWeather(city) {
       const temperature = Math.round(data.temp);
       const description = data.weather.description;
       const cityName = data.city_name.toUpperCase();
+      const windDirection = data.wind_cdir_full.charAt(0).toUpperCase() + data.wind_cdir_full.slice(1)
       const countryCode = data.country_code;
       const region = new Intl.DisplayNames(['en'], { type: 'region' });
       const country = region.of(countryCode);
@@ -60,7 +61,8 @@ function getCurrentWeather(city) {
       <h4 class="temperature">CURRENTLY FEELS LIKE <br> <span>${temperature}°C</span></h4>
       <div><img src="${statusImage}" class="mid-img" /></div>
       <p class="description">${description}</p>
-      <div class="grid-wrapper features">
+
+      <div class="grid-wrapper1 features">
       <div class="grid-item item1"><img class="small-img" src="${
         images.humidity
       }" ></div>
@@ -78,9 +80,35 @@ function getCurrentWeather(city) {
         images.raining
       }"></div>
       <div class="grid-item item8">RAIN/PRECIP:</div>
-      <div class="grid-item item9">${data.precip}%</div>
+      <div class="grid-item item9">${Math.round(data.precip)}%</div>
       <div class="grid-item item11"></div>
       <div class="grid-item item12"></div>
+      </div>
+
+      <div class="grid-wrapper2 features">
+      <div class="grid-1 img-item"><img class="small-img" src="${
+        images.humidity
+      }" ></div>
+      <div class="grid-2 grid-item">HUMIDITY:</div>
+      <div class="grid-3 img-item"><img class="small-img" src="${
+        images.raining
+      }"></div>
+      <div class="grid-4 grid-item">RAIN/PRECIP:</div>
+      <div class="grid-5 grid-item">${data.rh}%</div>
+      <div class="grid-6 grid-item">${Math.round(data.precip)}%</div>
+      <div class="grid-13 grid-item"><br></div>
+      <div class="grid-7 img-item"><img class="small-img" src="${
+        images.wind
+      }" ></div>
+      <div class="grid-8 grid-item">WIND DIRECTION:</div>
+      <div class="grid-9 img-item"><img class="small-img" src="${
+        images.windSpeed
+      }" ></div>
+      <div class="grid-10 grid-item">WIND SPEED:</div>
+      <div class="grid-11 grid-item">${windDirection}</div>
+      <div class="grid-12 grid-item">${Math.round(
+        (data.wind_spd / 1000) * 3600
+      )} KM/h</div>
       </div>
       `;
       weatherDiv.style.color = '#ffffff';
