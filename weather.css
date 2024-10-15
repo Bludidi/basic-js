@@ -1,6 +1,5 @@
 #weather-div {
 text-align: center;
-/* background-color: rgba(250, 235, 215, 0.208); */
 padding: 10px 0;
 }
 
@@ -33,7 +32,6 @@ padding: 10px 0;
 .small-img {
   width: 40px;
   height: 40px;
-  /* margin: 0 5px 0 10px; */
 }
 
 .mid-img {

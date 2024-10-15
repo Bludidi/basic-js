@@ -87,7 +87,7 @@ function getCurrentWeather(city) {
     } catch (error) {
       return error.message;
       //console.log(error.message)
-    }
+    } 
   };
   getData();
 }

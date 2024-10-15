@@ -7,6 +7,10 @@ function addTask() {
   const  newTask = document.getElementById('new-task').value;
 const taskItem = {"task": newTask, "isDone": false, }
   if (newTask !== '') {
+    const taskList = JSON.parse(localStorage.getItem('task'));
+    if (taskList) {
+      tasks = taskList
+    }
     tasks.push(taskItem);
     localStorage.setItem('task', JSON.stringify(tasks));
     document.getElementById('new-task').value = '';
