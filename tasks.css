@@ -7,7 +7,7 @@ button, #add-task {
 }
 
 .delete-img {
-  width: 50%;
+  max-width: 50%;
 }
 
  #tasks-wrapper, #weather-wrapper {
@@ -35,6 +35,11 @@ button, #add-task {
 
   .delete-btn {
     width: 40%;
+
+  }
+
+  .delete-img {
+    max-width: 50px;
   }
 }
 
@@ -68,12 +73,11 @@ h1 {
 .task-div {
   display: flex;
   list-style: none;
-  margin-bottom: 10px;
-  height: 40px;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(240, 248, 255, 0.322);
-  background-color: #ffffff28
+  border-bottom: 1px solid rgba(240, 248, 255, 0.322);
+  background-color: #ffffff28;
+  padding: none;
 }
 
 .task-div > li {
@@ -85,14 +89,16 @@ h1 {
 
 .delete-btn {
   width: 20%;
-  height: 100%;
   border-top: none;
   border-right: none;
   border-bottom: none;
-  border-left: 1px solid rgba(240, 248, 255, 0.322);
+  border-left: none;
   background-color: #ffffff00;
   margin-right: -14px;
   color:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .delete-btn:hover {
