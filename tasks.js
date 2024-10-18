@@ -80,8 +80,14 @@ function showTasks() {
     }
 
       const deleteBtn = document.createElement('button');
-      deleteBtn.textContent = 'DELETE';
+     // deleteBtn.textContent = 'DELETE';
       deleteBtn.setAttribute('class', 'delete-btn');
+
+      const trashImg = document.createElement('img');
+      trashImg.src = 'images/trash-bin.png';
+      trashImg.setAttribute('class', 'delete-img');
+
+      deleteBtn.appendChild(trashImg);
 
       taskDiv.appendChild(checkBox);
       taskDiv.appendChild(task);

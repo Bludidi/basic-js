@@ -6,6 +6,10 @@ button, #add-task {
   cursor: pointer;
 }
 
+.delete-img {
+  width: 50%;
+}
+
  #tasks-wrapper, #weather-wrapper {
   width: 50vw;
   border: 1px solid #285379;
