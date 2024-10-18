@@ -58,23 +58,20 @@
         />
       </div>
       <div id="weather-div">
-        <!-- <div class="grid-wrapper">
-          <div class="grid-item item1">1</div>
-          <div class="grid-item item2">2</div>
-          <div class="grid-item item3">3</div>
-          <div class="grid-item item4">4</div>
-          <div class="grid-item item5">5</div>
-          <div class="grid-item item6">6</div>
-          <div class="grid-item item7">7</div>
-          <div class="grid-item item8">8</div>
-          <div class="grid-item item9">9</div>
-          </div> -->
       </div>
     </section>
-
+    <footer class="footer">
+      <small>Copyright © <date id="date"></date> All Rights Reserved. Created by Bludidi </small>
+      </footer>
+      <script>
+        const date = new Date();
+        const dateTime = date.getFullYear();
+        document.getElementById("date").innerHTML = dateTime;
+      </script>
     <script src="index.js"></script>
     <script src="tasks.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="weather.js"></script>
   </body>
+  <footer></footer>
 </html>

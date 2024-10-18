@@ -6,6 +6,7 @@
 
 body {
   background-color: #141238;
+  margin: 0 auto;
 }
 
 #counter-wrapper {
@@ -99,4 +100,16 @@ h2 {
 
 #reset-btn:hover {
   font-size: 1.6rem;
+}
+
+.footer {
+  color: #fff;
+  text-align: center;
+  border-top: 1px solid #ffffff39;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: -1; */
+  background-color: #c1b9f80f;
+  height: 40px;
 }
