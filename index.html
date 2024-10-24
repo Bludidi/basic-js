@@ -61,6 +61,19 @@
       </div>
     </section>
     
+    <section id="converter-wrapper">
+      <h2>Currency Converter</h2>
+      <div class="input-div">
+        <input type="text" id="base-country" placeholder="country name" />
+        <span>vs</span>
+        <input type="text" id="target-country" placeholder="country name" />
+        <input type="text" id="amount" placeholder="Amount" />
+        <input type="button" id="add-task" value="CONVERT" onclick="convertCurrency()" />
+        
+      </div>
+      <div id="task-list"></div>
+    </section>
+
     <footer class="footer">
       <small>Copyright © <date id="date"></date> All Rights Reserved. Created by <span class="bold">Bludidi</span></small>
       </footer>
@@ -72,5 +85,6 @@
     <script src="tasks.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="weather.js"></script>
+    <script src="converter.js"></script>
   </body>
 </html>
