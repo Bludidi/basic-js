@@ -102,6 +102,10 @@ h2 {
   font-size: 1.6rem;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .footer {
   color: #fff;
   text-align: center;
