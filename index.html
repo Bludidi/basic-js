@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="tasks.css" />
     <link rel="stylesheet" href="weather.css" />
+    <link rel="stylesheet" href="converter.css" />
     <title>Basic JavaScript</title>
   </head>
 
@@ -69,9 +70,11 @@
         <input type="text" id="target-country" placeholder="country name" />
         <input type="text" id="amount" placeholder="Amount" />
         <input type="button" id="add-task" value="CONVERT" onclick="convertCurrency()" />
-        
+        <div id="output-wrapper">
+          <div class="flag-img"><img  class="flag" id="base-flag"></div>
+          <div id="new-amount"></div>
+          <div class="flag-img"><img  class="flag" id="target-flag"></div>
       </div>
-      <div id="task-list"></div>
     </section>
 
     <footer class="footer">

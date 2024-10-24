@@ -1,0 +1,12 @@
+.flag {
+  width: 40%;
+}
+
+.flag-img {
+  width: 20%;
+}
+
+#output-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
