@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="tasks.css" />
     <link rel="stylesheet" href="weather.css" />
+    <link rel="stylesheet" href="converter.css" />
     <title>Basic JavaScript</title>
   </head>
 
@@ -61,6 +62,23 @@
       </div>
     </section>
     
+    <section id="converter-wrapper">
+      <h2>Currency Converter</h2>
+      <div class="cc-input-div input-div">
+        <input type="text" id="amount" placeholder="Amount" />
+        <input type="text" id="base-country" class="country" placeholder="country name" />
+        <!-- <span>vs</span> -->
+        <input type="text" id="target-country" class="country" placeholder="country name" />
+      </div>
+
+        <div id="output-wrapper">
+          <div class="flag-img" ><img  class="flag" id="base-flag"><div id="base-flag-text"></div></div>
+          <div id="new-amount"></div>
+          <div class="flag-img" ><img  class="flag" id="target-flag"><div id="target-flag-text"></div></div>
+        </div>
+      <input type="button" id="convert" value="CONVERT" onclick="convertCurrency()" />
+    </section>
+
     <footer class="footer">
       <small>Copyright © <date id="date"></date> All Rights Reserved. Created by <span class="bold">Bludidi</span></small>
       </footer>
@@ -72,5 +90,6 @@
     <script src="tasks.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="weather.js"></script>
+    <script src="converter.js"></script>
   </body>
 </html>
