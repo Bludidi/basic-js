@@ -24,18 +24,24 @@ const getData = async () => {
     const targetCurrencyData = target.currencies[targetCurrencyName];
     const convertWithAmount = await axios.get(currUrl + baseCurrencyName + "/" + targetCurrencyName + "/" + amount);
 
-    if (amount == "") {
-     alert ("Please enter amount to be converted");
+    console.log(baseCurrencyData)
+    if (amount === "") {
+     alert ("One or more field is empty");
+      baseCountry = "";
+      targetCountry == "";
     } if (baseCountry === targetCountry) {
       alert("Please enter a different target country");
     } else {
       const baseAmount = baseCurrencyData.symbol + amount;
       const newAmount = targetCurrencyData.symbol + convertWithAmount.data.conversion_result;
     document.getElementById("new-amount").innerHTML = baseAmount + " = " + newAmount;
+    document.getElementById("base-flag-text").innerHTML = baseCurrencyData.name;
+    document.getElementById("target-flag-text").innerHTML = targetCurrencyData.name;
     const baseImg = document.getElementById("base-flag");
     const targetImg = document.getElementById("target-flag");
-    baseImg.setAttribute("src", base.flags.svg);
-    targetImg.setAttribute("src", target.flags.svg);
+    baseImg.setAttribute("src", base.flags.png);
+    targetImg.setAttribute("src", target.flags.png);
+
     }
 
     

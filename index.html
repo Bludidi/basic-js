@@ -64,17 +64,19 @@
     
     <section id="converter-wrapper">
       <h2>Currency Converter</h2>
-      <div class="input-div">
-        <input type="text" id="base-country" placeholder="country name" />
-        <span>vs</span>
-        <input type="text" id="target-country" placeholder="country name" />
+      <div class="cc-input-div input-div">
         <input type="text" id="amount" placeholder="Amount" />
-        <input type="button" id="add-task" value="CONVERT" onclick="convertCurrency()" />
-        <div id="output-wrapper">
-          <div class="flag-img"><img  class="flag" id="base-flag"></div>
-          <div id="new-amount"></div>
-          <div class="flag-img"><img  class="flag" id="target-flag"></div>
+        <input type="text" id="base-country" class="country" placeholder="country name" />
+        <!-- <span>vs</span> -->
+        <input type="text" id="target-country" class="country" placeholder="country name" />
       </div>
+
+        <div id="output-wrapper">
+          <div class="flag-img" ><img  class="flag" id="base-flag"><div id="base-flag-text"></div></div>
+          <div id="new-amount"></div>
+          <div class="flag-img" ><img  class="flag" id="target-flag"><div id="target-flag-text"></div></div>
+        </div>
+      <input type="button" id="convert" value="CONVERT" onclick="convertCurrency()" />
     </section>
 
     <footer class="footer">
