@@ -24,7 +24,6 @@ const getData = async () => {
     const targetCurrencyData = target.currencies[targetCurrencyName];
     const convertWithAmount = await axios.get(currUrl + baseCurrencyName + "/" + targetCurrencyName + "/" + amount);
 
-    console.log(baseCurrencyData)
     if (amount === "") {
      alert ("One or more field is empty");
       baseCountry = "";
@@ -34,6 +33,10 @@ const getData = async () => {
     } else {
       const baseAmount = baseCurrencyData.symbol + amount;
       const newAmount = targetCurrencyData.symbol + convertWithAmount.data.conversion_result;
+      const convRate = convertWithAmount.data.conversion_rate;
+      console.log(convRate);
+
+    document.getElementById("conv-rate").innerHTML = "Conversion rate: " + convRate;
     document.getElementById("new-amount").innerHTML = baseAmount + " = " + newAmount;
     document.getElementById("base-flag-text").innerHTML = baseCurrencyData.name;
     document.getElementById("target-flag-text").innerHTML = targetCurrencyData.name;
