@@ -5,13 +5,14 @@ const api_key = "45cb484fe555a71408c5de53"
 
 
 function convertCurrency(country1, country2, amount) {
-  const baseCountry = document.getElementById("base-country").value.split(" ").join("%20");
-  const targetCountry = document.getElementById("target-country").value.split(" ").join("%20");
-   amount = document.getElementById("amount").value;
+  const baseCountry = document.getElementById("base-country").value.trim().split(" ").join("%20");
+  const targetCountry = document.getElementById("target-country").value.trim().split(" ").join("%20");
+   amount = document.getElementById("amount").value.trim();
 
   const baseCountryUrl = base_url_1 + baseCountry;
   const targetCountryUrl = base_url_1 + targetCountry;
   const currUrl = base_url_2 + api_key + "/pair/";
+  
 const getData = async () => {
   try {
     country1 = await axios.get(baseCountryUrl);
@@ -34,7 +35,7 @@ const getData = async () => {
       const baseAmount = baseCurrencyData.symbol + amount;
       const newAmount = targetCurrencyData.symbol + convertWithAmount.data.conversion_result;
       const convRate = convertWithAmount.data.conversion_rate;
-      console.log(convRate);
+      console.log(country1);
 
     document.getElementById("conv-rate").innerHTML = "Conversion rate: " + convRate;
     document.getElementById("new-amount").innerHTML = baseAmount + " = " + newAmount;
@@ -44,6 +45,8 @@ const getData = async () => {
     const targetImg = document.getElementById("target-flag");
     baseImg.setAttribute("src", base.flags.png);
     targetImg.setAttribute("src", target.flags.png);
+    baseImg.setAttribute("alt", baseCountry + " flag");
+    targetImg.setAttribute("alt", targetCountry + " flag");
 
     }
 
