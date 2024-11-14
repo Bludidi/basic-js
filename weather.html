@@ -11,8 +11,8 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="tasks.css" />
-    <!-- <link rel="stylesheet" href="weather.css" />
-    <link rel="stylesheet" href="converter.css" /> -->
+    <link rel="stylesheet" href="weather.css" />
+    <link rel="stylesheet" href="converter.css" />
     <title>Basic JavaScript</title>
   </head>
 
@@ -25,16 +25,20 @@
   </header>
   <body>
 
-    <section id="tasks-wrapper">
-      <h2>Tasks</h2>
+    <section id="weather-wrapper">
+      <h2>Current Weather</h2>
       <div class="input-div">
-        <input type="text" id="new-task" placeholder="Add new task..." />
-        <input type="button" id="add-task" value="SAVE" onclick="addTask()" />
+        <input type="text" id="city-name" placeholder="Type city name..." />
+        <input
+          type="button"
+          id="add-city"
+          value="ENTER"
+          onclick="getCurrentWeather()"
+        />
       </div>
-      <div id="task-list"></div>
+      <div id="weather-div">
+      </div>
     </section>
-
-    
 
     <footer class="footer">
       <small>Copyright © <date id="date"></date> All Rights Reserved. Created by <span class="bold">Bludidi</span></small>
@@ -43,8 +47,11 @@
         const date = new Date().getFullYear();
         document.getElementById("date").innerHTML = date;
       </script>
-    <!-- <script src="index.js"></script> -->
+    <script src="index.js"></script>
     <script src="tasks.js"></script>
     <script src="nav.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="weather.js"></script>
+    <script src="converter.js"></script>
   </body>
 </html>

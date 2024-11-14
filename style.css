@@ -7,9 +7,43 @@
 body {
   background-color: #141238;
   margin: 0 auto;
+  padding: 0;
+}
+
+header {
+  background-color: #c1b9f80f;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  align-items: center;
+  border-bottom: 1px solid #ffffff39;
+}
+
+header > menu {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 70%;
+}
+
+header > menu > div > a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* header > menu > div > a:focus{
+  text-decoration: underline;
+  color: #ffffff;
+} */
+
+.active {
+  text-decoration: underline;
 }
 
 #counter-wrapper {
+  display: none; /* I am hiding a useless counter */
   width: 50%;
   border: 1px solid #285379;
   background-color: #141238;
@@ -107,6 +141,8 @@ h2 {
 }
 
 .footer {
+  position: fixed;
+  bottom: 0;
   color: #fff;
   text-align: center;
   border-top: 1px solid #ffffff39;
@@ -116,4 +152,5 @@ h2 {
   /* margin-bottom: -1; */
   background-color: #c1b9f80f;
   height: 40px;
+  width: 100vw;
 }
