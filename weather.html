@@ -17,14 +17,31 @@
   </head>
 
   <header>
-    <menu>
+    <menu class="menu-bg">
       <div><a href="index.html" class="nav-link">Task Manager</a></div>
       <div><a href="weather.html" class="nav-link">Current Weather</a></div>
       <div><a href="converter.html" class="nav-link">Currency Converter</a></div>
     </menu>
+    <menu class="menu-sm">
+      <button class="open-modal" onclick="openModal()">
+        <img src="images/humburger.png" alt="menu-icon" />
+      </button>
+    </menu>
   </header>
   <body>
-
+    <div class="modal">
+      <button class="close-modal" onclick="closeModal()"><img
+        src="images/close.png"
+        alt="close-menu-icon"
+      /></button>
+      <ul>
+        <li><a href="index.html" class="nav-link">Task Manager</a></li>
+        <li><a href="weather.html" class="nav-link">Current Weather</a></li>
+        <li>
+          <a href="converter.html" class="nav-link">Currency Converter</a>
+        </li>
+      </ul>
+    </div>
     <section id="weather-wrapper">
       <h2>Current Weather</h2>
       <div class="input-div">
