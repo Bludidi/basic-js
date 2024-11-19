@@ -3,7 +3,8 @@ const base_url_1 = "https://restcountries.com/v3.1/name/";
 const base_url_2 = "https://v6.exchangerate-api.com/v6/"
 const api_key = "45cb484fe555a71408c5de53"
 
-
+const outputDisplay = document.getElementById("output-wrapper");
+outputDisplay.style.display = "none";
 function convertCurrency(country1, country2, amount) {
   const baseCountry = document.getElementById("base-country").value.trim().split(" ").join("%20");
   const targetCountry = document.getElementById("target-country").value.trim().split(" ").join("%20");
@@ -47,6 +48,7 @@ const getData = async () => {
     targetImg.setAttribute("src", target.flags.png);
     baseImg.setAttribute("alt", baseCountry + " flag");
     targetImg.setAttribute("alt", targetCountry + " flag");
+    outputDisplay.style.display = "flex";
 
     }
 
