@@ -11,8 +11,8 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="tasks.css" />
-    <link rel="stylesheet" href="weather.css" />
-    <link rel="stylesheet" href="converter.css" />
+    <link rel="stylesheet" href="fun.css" />
+    <!-- <link rel="stylesheet" href="converter.css" /> -->
     <title>Basic JavaScript</title>
   </head>
 
@@ -20,14 +20,18 @@
     <menu class="menu-bg">
       <div><a href="index.html" class="nav-link">Task Manager</a></div>
       <div><a href="weather.html" class="nav-link">Current Weather</a></div>
-      <div><a href="converter.html" class="nav-link">Currency Converter</a></div>
+      <div>
+        <a href="converter.html" class="nav-link">Currency Converter</a>
+      </div>
       <div><a href="fun.html" class="nav-link">Fun Corner</a></div>
     </menu>
+
     <menu class="menu-sm">
       <button class="open-modal" onclick="openModal()">
         <img src="images/humburger.png" alt="menu-icon" />
       </button>
     </menu>
+  
   </header>
   <body>
     <div class="modal">
@@ -44,34 +48,29 @@
         <li><a href="fun.html" class="nav-link">Qoutes & Jokes</a></li>
       </ul>
     </div>
-    <section id="converter-wrapper">
-      <h2>Currency Converter</h2>
-      <div class="cc-input-div input-div">
-        <input type="text" id="amount" placeholder="Amount" />
-        <input type="text" id="base-country" class="country" placeholder="country name" />
-        <span>TO</span>
-        <input type="text" id="target-country" class="country" placeholder="country name" />
+    <section id="fun-wrapper">
+      <h2>Fun Corner</h2>
+      <div class="select-div">
+        <button class="btn fun-btn" onclick="getRiddle()">Riddles</button>
+        <button class="btn fun-btn" onclick="getFacts()">Facts</button>
+        <button class="btn fun-btn" onclick="getJokes()">Jokes</button>
+        <button class="btn fun-btn" onclick="getQuotes()">Quotes</button>
       </div>
-
-        <div id="output-wrapper">
-          <div class="flag-img" ><img  class="flag" id="base-flag"><div id="base-flag-text"></div></div>
-          <div id="amount-wrap"><div id="new-amount"></div><div id="conv-rate"></div></div>
-          <div class="flag-img" ><img  class="flag" id="target-flag"><div id="target-flag-text"></div></div>
-        </div>
-      <input type="button" id="convert" value="CONVERT" onclick="convertCurrency()" />
+      <div id="fun-output"></div>
     </section>
 
     <footer class="footer">
-      <small>Copyright © <date id="date"></date> All Rights Reserved. Created by <span class="bold">Bludidi</span></small>
-      </footer>
-      <script>
-        const date = new Date().getFullYear();
-        document.getElementById("date").innerHTML = date;
-      </script>
-    <!-- <script src="tasks.js"></script> -->
+      <small
+        >Copyright © <date id="date"></date> All Rights Reserved. Created by
+        <span class="bold">Bludidi</span></small
+      >
+    </footer>
+    <script>
+      const date = new Date().getFullYear();
+      document.getElementById('date').innerHTML = date;
+    </script>
     <script src="nav.js"></script>
+    <script src="fun.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- <script src="weather.js"></script> -->
-    <script src="converter.js"></script>
   </body>
 </html>
