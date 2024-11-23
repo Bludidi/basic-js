@@ -1,0 +1,41 @@
+# Query: jokes.html
+# Flags: RegExp
+# ContextLines: 1
+
+8 results - 4 files
+
+converter.html:
+  23        <div><a href="converter.html" class="nav-link">Currency Converter</a></div>
+  24:       <div><a href="jokes.html" class="nav-link">Quotes & Jokes</a></div>
+  25      </menu>
+
+  43          </li>
+  44:         <li><a href="jokes.html" class="nav-link">Qoutes & Jokes</a></li>
+  45        </ul>
+
+fun.html:
+  25        </div>
+  26:       <div><a href="fun.html" class="nav-link">Quotes & Jokes</a></div>
+  27      </menu>
+
+  47          </li>
+  48:         <li><a href="jokes.html" class="nav-link">Qoutes & Jokes</a></li>
+  49        </ul>
+
+index.html:
+  25        </div>
+  26:       <div><a href="jokes.html" class="nav-link">Quotes & Jokes</a></div>
+  27      </menu>
+
+  47          </li>
+  48:         <li><a href="jokes.html" class="nav-link">Qoutes & Jokes</a></li>
+  49        </ul>
+
+weather.html:
+  23        <div><a href="converter.html" class="nav-link">Currency Converter</a></div>
+  24:       <div><a href="jokes.html" class="nav-link">Fun Corner</a></div>
+  25      </menu>
+
+  43          </li>
+  44:         <li><a href="jokes.html" class="nav-link">Fun Corner</a></li>
+  45        </ul>

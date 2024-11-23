@@ -1,0 +1,17 @@
+
+.select-div {
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-around;
+  margin: 0  auto;
+}
+
+.fun-btn {
+  width: 20%;
+}
+
+@media only screen and (max-width: 600px) {
+  #fun-wrapper {
+    width: 90%;
+  }
+}

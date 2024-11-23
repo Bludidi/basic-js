@@ -1,8 +1,14 @@
-const links = document.querySelectorAll(".nav-link");
+const openMenu = document.querySelector(".open-modal");
+// const closeMenu = document.querySelector(".close-modal");
+const modal = document.querySelector(".modal");
 
-links.forEach(link => {
-  link.addEventListener("click", function() {
-    links.forEach(l => l.classList.remove("active")); // Remove active class from all links
-    this.classList.add("active"); // Add active class to the clicked link
-  });
-});
+function openModal() {
+    modal.style.display = "block";
+    openMenu.style.display = "none";
+  }
+
+  function closeModal() {
+    modal.style.display = "none";
+    openMenu.style.display = "block";
+  }
+ 
